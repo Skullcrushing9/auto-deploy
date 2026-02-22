@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auto-deploy-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auto-deploy-app
+  template:
+    metadata:
+      labels:
+        app: auto-deploy-app
+    spec:
+      containers:
+      - name: app
+        image: gamemaster007/node-app:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
