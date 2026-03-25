@@ -20,7 +20,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker image
-      run: docker build -t Skullcrushing9/auto-deploy:latest .
+      run: docker build -t gamemaster007/auto-deploy:latest .
 
     - name: Push Docker image
-      run: docker push Skullcrushing9/auto-deploy:latest
+      run: docker push gamemaster007/auto-deploy:latest
