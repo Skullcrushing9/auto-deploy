@@ -8,7 +8,7 @@ spec:
     app: auto-deploy-app
   ports:
   - port: 80
-    targetPort: 3000
+    targetPort: 80
     nodePort: 30007
 
 
